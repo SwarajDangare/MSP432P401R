@@ -1,0 +1,51 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             main, CODE, READONLY
+    2 00000000                 EXPORT           __main
+    3 00000000                 ENTRY
+    4 00000000         __main
+    5 00000000 F240 1175       MOVW             R1, #0x0175
+    6 00000004 F6C1 31CD       MOVT             R1, #0x1BCD
+    7 00000008 F241 6275       MOVW             R2, #0x1675
+    8 0000000C F2CE 22CB       MOVT             R2, #0xE2CB
+    9 00000010 EA11 0302       ANDS             R3, R1, R2  ; AND 
+   10 00000014 EA31 0402       BICS             R4, R1, R2  ; R1 AND (NOT R2)
+   11 00000018 EA91 0502       EORS             R5, R1, R2  ; XOR AB' + A'B
+   12 0000001C EA71 0602       ORNS             R6, R1, R2  ; R1 OR (NOT R2)
+   13 00000020 EA51 0702       ORRS             R7, R1, R2  ; OR
+   14 00000024                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\main.d -o.\objects\main.o -I.\RTE\_Target_1 -I"D:\
+2.  SOFTWARES\ARM\CMSIS\5.8.0\CMSIS\Core\Include" -I"D:\2.  SOFTWARES\TexasInst
+ruments\MSP432P4xx_DFP\3.2.6\Device\Include" --predefine="__EVAL SETA 1" --pred
+efine="__UVISION_VERSION SETA 536" --predefine="_RTE_ SETA 1" --predefine="_RTE
+_ SETA 1" --predefine="__MSP432P401R__ SETA 1" --list=.\listings\main.lst main.
+s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 4 in file main.s
+   Uses
+      At line 2 in file main.s
+Comment: __main used once
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 1 in file main.s
+   Uses
+      None
+Comment: main unused
+2 symbols
+337 symbols in table

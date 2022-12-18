@@ -1,0 +1,32 @@
+	MOV R1, #0x45
+	MOV R2, #0x23
+	SUBS R1, R2
+	SBCS R1, R2
+	RSBS R1, R2
+	ADDS R1, R2
+	ADCS R1, R2	
+	;ADDW R1, R2, #0xFFF
+	;SUBW R1, R2, #0xFFF
+
+	
+	
+	MOV R1, #0x2
+	MOV R2, #0x3
+	MUL R3, R1, R2
+	MLA R4, R3, R1, R2
+	MLS R5, R3, R1, R2
+	
+		AREA main, CODE, READONLY
+	EXPORT __main
+	ENTRY
+__main
+	MOV R1, #0x4
+	MOV R2, #0x5A5A
+	LSR R3, R2, R1
+	ASR R4, R2 ,R1
+	LSL R5, R2, R1
+	ROR R6, R2, R1
+	RRXS R7 ,R2
+	RRXS R7 ,R7
+	RRXS R7 ,R7
+	END

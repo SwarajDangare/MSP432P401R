@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: SWARAJ DANGARE, SWARAJ, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  D:\2.  SOFTWARES\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.164.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+D:\1.  CODING\MSP432P401R CODES\LAB_3\LAB_3.uvprojx
+Project File Date:  09/13/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'D:\2.  SOFTWARES\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+"main.s", line 10: Warning: A1313W: Missing END directive at end of file
+   10 0000000c 
+0 Errors, 1 Warning
+assembling main.s...
+linking...
+Program Size: Code=72 RO-data=324 RW-data=0 ZI-data=512  
+FromELF: creating hex file...
+".\Objects\LAB_3.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: TexasInstruments
+                http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/msp432cmsis/latest/exports/TexasInstruments.MSP432P4xx_DFP.3.2.6.pack
+                TexasInstruments.MSP432P4xx_DFP.3.2.6
+                Device Family Pack for Texas Instruments SimpleLink(TM) MSP432 Series
+   * Component: Startup Version: 3.2.2
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\2.  SOFTWARES\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\2.  SOFTWARES\TexasInstruments\MSP432P4xx_DFP\3.2.6\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: TexasInstruments::Device:Startup:3.2.2
+      Source file:   Examples\BlinkLED\blinkLED.c
+      Include file:  Device\Include\msp_compatibility.h
+      Source file:   Examples\EmptyMain\main.c
+      Source file:   Device\Source\system_msp432p401r.c
+      Source file:   Device\Source\startup_msp432p401r_uvision.s
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

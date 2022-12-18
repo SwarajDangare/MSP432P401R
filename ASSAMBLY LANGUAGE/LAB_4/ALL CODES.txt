@@ -1,0 +1,61 @@
+		AREA main, CODE, READONLY
+		EXPORT __main
+		ENTRY
+__main
+		
+		LDR R1,=0x20000000
+		LDR R2,=0x64156415
+		STR R2, [R1]
+		MOV R0, #3
+		
+loop	STR R2,[R1,#4]!
+		SUBS R0, #1
+		BNE loop
+		
+		
+		
+__main
+		MOV R1, #0
+		MOV R2, #0xA
+		MOV R3, #0xAB
+loop	ADD R1,R3
+		SUBS R2,#1
+		BNE loop
+		END
+		
+		
+		
+		
+		
+		
+		AREA main, CODE , READONLY
+	EXPORT __main
+	ENTRY 
+__main
+	LDR R1, =0x20000000 ;R1=0X20000000
+	LDR R2, =0x64
+	STR R2,[R1], 		;store R2  value in location 0x20000000
+	ADD R1, R1, #1   ;R1=0X20000001
+	STR R2,[R1]		;Storing r2 value in location 0x20000001
+	ADD R1, R1, #1    ;R1=0X20000002
+	STRB R2,[R1],#1		;store R2  value in location 0x20000002
+	STRB R2,[R1,#1]!	;store R2  value in location 0x20000003
+	END
+		
+		
+		
+		
+		
+		
+		
+		AREA SATURATION, CODE , READONLY
+	EXPORT __main
+	ENTRY 
+__main
+	MOV R1, #0
+	MOV R2, #0XA
+	MOV R3, #0XAB
+here ADD R1, R3
+	SUBS R2, #1
+	BNE here
+	END
